@@ -63,6 +63,7 @@ HOSTNAME=$(uname -n | cut -d'.' -f1)
 : "${GANESHA_OPTIONS:=""}"
 : "${GANESHA_EPOCH:=""}" # For restarting
 : "${MGR_IP:=0.0.0.0}"
+: "${RGW_FRONTENDS:="civetweb port=$RGW_CIVETWEB_IP:$RGW_CIVETWEB_PORT"}"
 
 # Make sure to change the value of one another if user changes some of the default values
 while read -r line; do
